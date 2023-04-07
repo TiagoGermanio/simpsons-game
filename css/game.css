@@ -1,0 +1,64 @@
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: pink;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('../img/fundo.jpg');
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 192, 203);
+    width: 100%;
+    max-width: 700px;
+    padding: 30px;
+    margin: 24px 0 0;
+    border-radius: 12px;
+    font-size: 1.2em;
+}
+.grid{
+    display: grid;
+    width: 100%;
+    max-width: 700px;
+    grid-template-columns: repeat(5,1fr);
+    gap: 15px;
+    margin: 100px auto;
+}
+.card{
+    aspect-ratio: 3/4;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+}
+.face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid pink;
+    transition: all 400ms ease;
+    border-radius: 12px;
+
+}
+.front{
+    transform:  rotateY(180deg);
+}
+
+.back{
+    background-image: url('../img/back.jpg');
+    backface-visibility: hidden;
+
+}
+.reviw-card{
+    transform:  rotateY(180deg);
+}
+.disabled-card{
+    filter: saturate(0);
+}
